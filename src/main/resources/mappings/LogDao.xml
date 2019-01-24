@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inesa.hadoop.dao.LogDao">
+
+	<sql id="logColumns">
+		a.id AS "id",
+		a.format AS "format",
+		a.type AS "type",
+		a.userAgent AS "userAgent",
+		a.userId AS "userId",
+		a.userName AS "userName",
+		a.insertDate AS "insertDate",
+		a.domain AS "domain",
+		a.interFace AS "interFace",
+		a.interFaceParam AS "interFaceParam",
+		a.success AS "success",
+		a.message AS "message",
+		a.parameter AS "parameter",
+		a.result AS "result",
+		a.sqlIn AS "sqlIn",
+		a.sqlParameter AS "sqlParameter",
+		a.sqlOut AS "sqlOut",
+		a.exception AS "exception",
+		a.detail AS "detail",
+		a.fileName AS "fileName"
+	</sql>
+
+	<sql id="logJoins">
+	</sql>
+
+	<select id="findList" resultType="com.inesa.hadoop.entity.LogEntity">
+		SELECT
+			<include refid="logColumns"/>
+		FROM ${app} a
+		<where>
+			1 = 1
+			<if test="type != null and type != ''">
+				AND a.type = #{type}
+			</if>
+			<if test="userId != null and userId != ''">
+				AND a.userId = #{userId}
+			</if>
+			<if test="userName != null and userName != ''">
+				AND a.userName LIKE '%'+#{userName}+'%'
+			</if>
+			<if test="insertDate != null and insertDate != ''">
+				AND a.insertDate = #{insertDate}
+			</if>
+			<if test="startDate != null and startDate != ''">
+				AND <![CDATA[a.insertDate >= #{startDate}]]>
+			</if>
+			<if test="endDate != null and endDate != ''">
+				AND <![CDATA[a.insertDate <= #{endDate}]]>
+			</if>
+			<if test="interFace != null and interFace != ''">
+				AND a.interFace LIKE '%'+#{interFace}+'%'
+			</if>
+			<if test="interFaceParam != null and interFaceParam != ''">
+				AND a.interFaceParam LIKE '%'+#{interFaceParam}+'%'
+			</if>
+			<if test="success != null and success != ''">
+				AND a.success = #{success}
+			</if>
+			<if test="parameter != null and parameter != ''">
+				AND a.parameter LIKE '%'+#{parameter}+'%'
+			</if>
+			<if test="sqlIn != null and sqlIn != ''">
+				AND a.sqlIn LIKE '%'+#{sqlIn}+'%'
+			</if>
+			<if test="sqlParameter != null and sqlParameter != ''">
+				AND a.sqlParameter LIKE '%'+#{sqlParameter}+'%'
+			</if>
+		</where>
+		ORDER BY a.insertDate DESC
+	</select>
+
+    <insert id="insert">
+		INSERT INTO ${app}(
+            id,
+            format,
+            type,
+            userAgent,
+            userId,
+            userName,
+            insertDate,
+            domain,
+            interFace,
+            interFaceParam,
+            success,
+            message,
+            parameter,
+            result,
+            sqlIn,
+            sqlParameter,
+            sqlOut,
+            exception,
+            detail,
+            fileName
+		) VALUES (
+            #{id},
+            #{format},
+            #{type},
+            #{userAgent},
+            #{userId},
+            #{userName},
+            #{insertDate},
+            #{domain},
+            #{interFace},
+            #{interFaceParam},
+            #{success},
+            #{message},
+            #{parameter},
+            #{result},
+            #{sqlIn},
+            #{sqlParameter},
+            #{sqlOut},
+            #{exception},
+            #{detail},
+            #{fileName}
+		)
+	</insert>
+
+	<update id="createTable" parameterType="com.inesa.hadoop.entity.LogEntity">
+      create table ${app}(
+        [id] varchar(64) NOT NULL,
+        [format] varchar(64) DEFAULT 1 NOT NULL,
+        [type] varchar(64) NOT NULL,
+        [userAgent] varchar(500) NULL,
+        [userId] varchar(64) NULL,
+        [userName] varchar(64) NULL,
+        [insertDate] datetime NULL,
+        [domain] varchar(255) NULL,
+        [interFace] varchar(500) NULL,
+        [interFaceParam] varchar(max) NULL,
+        [success] char(1) DEFAULT '-' NULL,
+        [message] varchar(max) NULL,
+        [parameter] varchar(max) NULL,
+        [result] varchar(max) NULL,
+        [sqlIn] varchar(max) NULL,
+        [sqlParameter] varchar(max) NULL,
+        [sqlOut] varchar(max) NULL,
+        [exception] varchar(max) NULL,
+        [detail] varchar(max) NULL,
+        [fileName] varchar(255) NULL,
+        PRIMARY KEY (id))
+    </update>
+
+	<select id="findTable" resultType="com.inesa.hadoop.entity.LogEntity">
+		SELECT id
+		FROM [sysobjects]
+		WHERE name = #{app}
+	</select>
+</mapper>

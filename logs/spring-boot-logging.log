@@ -1,0 +1,566 @@
+2019-01-21 16:52:00.003  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkContext            : Running Spark version 1.6.1
+2019-01-21 16:52:00.025  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : Changing view acls to: Administrator
+2019-01-21 16:52:00.025  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : Changing modify acls to: Administrator
+2019-01-21 16:52:00.025  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(Administrator); users with modify permissions: Set(Administrator)
+2019-01-21 16:52:00.167  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'sparkDriver' on port 54987.
+2019-01-21 16:52:00.242  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-4] akka.event.slf4j.Slf4jLogger             : Slf4jLogger started
+2019-01-21 16:52:00.259  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-3] Remoting                                 : Starting remoting
+2019-01-21 16:52:00.535  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-6] Remoting                                 : Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@localhost:55000]
+2019-01-21 16:52:00.536  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'sparkDriverActorSystem' on port 55000.
+2019-01-21 16:52:00.538  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering MapOutputTracker
+2019-01-21 16:52:00.539  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering BlockManagerMaster
+2019-01-21 16:52:00.547  INFO 733400 --- [pool-1-thread-1] o.apache.spark.storage.DiskBlockManager  : Created local directory at C:\Users\Administrator\AppData\Local\Temp\blockmgr-453990ec-3a9b-48ad-b255-fd813d4675fb
+2019-01-21 16:52:00.548  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.MemoryStore     : MemoryStore started with capacity 1780.5 MB
+2019-01-21 16:52:00.573  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering OutputCommitCoordinator
+2019-01-21 16:52:00.587  INFO 733400 --- [pool-1-thread-1] org.spark-project.jetty.server.Server    : jetty-8.y.z-SNAPSHOT
+2019-01-21 16:52:00.613  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.AbstractConnector       : Started SelectChannelConnector@0.0.0.0:4040
+2019-01-21 16:52:00.624  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'SparkUI' on port 4040.
+2019-01-21 16:52:00.624  INFO 733400 --- [pool-1-thread-1] org.apache.spark.ui.SparkUI              : Started SparkUI at http://localhost:4040
+2019-01-21 16:52:00.778  INFO 733400 --- [pool-1-thread-1] org.apache.spark.executor.Executor       : Starting executor ID driver on host localhost
+2019-01-21 16:52:00.859  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 55007.
+2019-01-21 16:52:00.859  INFO 733400 --- [pool-1-thread-1] o.a.s.n.netty.NettyBlockTransferService  : Server created on 55007
+2019-01-21 16:52:00.859  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : Trying to register BlockManager
+2019-01-21 16:52:00.860  INFO 733400 --- [dispatcher-event-loop-3] o.a.s.s.BlockManagerMasterEndpoint       : Registering block manager localhost:55007 with 1780.5 MB RAM, BlockManagerId(driver, localhost, 55007)
+2019-01-21 16:52:00.861  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager
+2019-01-21 16:52:00.936 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : ==>  Preparing: SELECT id FROM [sysobjects] WHERE name = ? 
+2019-01-21 16:52:00.937 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : ==> Parameters: smphbeatslog(String)
+2019-01-21 16:52:00.942 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : <==      Total: 1
+2019-01-21 16:52:00.953 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : ==>  Preparing: SELECT a.id AS "id", a.app AS "app", a.service AS "service", a.name AS "name", a.create_date AS "createDate", a.update_date AS "updateDate" FROM file_read_log a WHERE 1 = 1 AND a.app = ? AND a.service = ? ORDER BY a.create_date DESC 
+2019-01-21 16:52:00.954 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : ==> Parameters: smphbeatslog(String), all(String)
+2019-01-21 16:52:00.958 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : <==      Total: 1
+2019-01-21 16:52:00.987  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+2019-01-21 16:52:00.987  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+2019-01-21 16:52:00.987  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/api,null}
+2019-01-21 16:52:00.987  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/,null}
+2019-01-21 16:52:00.987  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/static,null}
+2019-01-21 16:52:00.987  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+2019-01-21 16:52:00.988  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+2019-01-21 16:52:00.988  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+2019-01-21 16:52:00.988  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors,null}
+2019-01-21 16:52:00.988  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+2019-01-21 16:52:00.989  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/environment,null}
+2019-01-21 16:52:00.989  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+2019-01-21 16:52:00.989  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+2019-01-21 16:52:00.989  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+2019-01-21 16:52:00.989  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage,null}
+2019-01-21 16:52:00.989  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+2019-01-21 16:52:00.990  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+2019-01-21 16:52:00.990  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+2019-01-21 16:52:00.990  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+2019-01-21 16:52:00.990  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+2019-01-21 16:52:00.990  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages,null}
+2019-01-21 16:52:00.990  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+2019-01-21 16:52:00.990  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+2019-01-21 16:52:00.990  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+2019-01-21 16:52:00.991  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs,null}
+2019-01-21 16:52:01.042  INFO 733400 --- [pool-1-thread-1] org.apache.spark.ui.SparkUI              : Stopped Spark web UI at http://localhost:4040
+2019-01-21 16:52:01.046  INFO 733400 --- [dispatcher-event-loop-1] o.a.s.MapOutputTrackerMasterEndpoint     : MapOutputTrackerMasterEndpoint stopped!
+2019-01-21 16:52:01.067  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.MemoryStore     : MemoryStore cleared
+2019-01-21 16:52:01.068  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.BlockManager    : BlockManager stopped
+2019-01-21 16:52:01.073  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : BlockManagerMaster stopped
+2019-01-21 16:52:01.073  INFO 733400 --- [dispatcher-event-loop-3] rdinator$OutputCommitCoordinatorEndpoint : OutputCommitCoordinator stopped!
+2019-01-21 16:52:01.075  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-3] emoteActorRefProvider$RemotingTerminator : Shutting down remote daemon.
+2019-01-21 16:52:01.082  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-3] emoteActorRefProvider$RemotingTerminator : Remote daemon shut down; proceeding with flushing remote transports.
+2019-01-21 16:52:01.115  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkContext            : Successfully stopped SparkContext
+2019-01-21 16:52:01.172  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-6] emoteActorRefProvider$RemotingTerminator : Remoting shut down.
+2019-01-21 16:53:00.004  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkContext            : Running Spark version 1.6.1
+2019-01-21 16:53:00.007  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : Changing view acls to: Administrator
+2019-01-21 16:53:00.007  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : Changing modify acls to: Administrator
+2019-01-21 16:53:00.007  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(Administrator); users with modify permissions: Set(Administrator)
+2019-01-21 16:53:00.268  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'sparkDriver' on port 55031.
+2019-01-21 16:53:00.327  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-2] akka.event.slf4j.Slf4jLogger             : Slf4jLogger started
+2019-01-21 16:53:00.342  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-2] Remoting                                 : Starting remoting
+2019-01-21 16:53:00.529  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-3] Remoting                                 : Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@localhost:55044]
+2019-01-21 16:53:00.531  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'sparkDriverActorSystem' on port 55044.
+2019-01-21 16:53:00.533  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering MapOutputTracker
+2019-01-21 16:53:00.535  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering BlockManagerMaster
+2019-01-21 16:53:00.547  INFO 733400 --- [pool-1-thread-1] o.apache.spark.storage.DiskBlockManager  : Created local directory at C:\Users\Administrator\AppData\Local\Temp\blockmgr-c8224da8-72e4-429a-934b-375961a4adae
+2019-01-21 16:53:00.549  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.MemoryStore     : MemoryStore started with capacity 1780.5 MB
+2019-01-21 16:53:00.679  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering OutputCommitCoordinator
+2019-01-21 16:53:00.700  INFO 733400 --- [pool-1-thread-1] org.spark-project.jetty.server.Server    : jetty-8.y.z-SNAPSHOT
+2019-01-21 16:53:00.730  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.AbstractConnector       : Started SelectChannelConnector@0.0.0.0:4040
+2019-01-21 16:53:00.730  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'SparkUI' on port 4040.
+2019-01-21 16:53:00.730  INFO 733400 --- [pool-1-thread-1] org.apache.spark.ui.SparkUI              : Started SparkUI at http://localhost:4040
+2019-01-21 16:53:00.833  INFO 733400 --- [pool-1-thread-1] org.apache.spark.executor.Executor       : Starting executor ID driver on host localhost
+2019-01-21 16:53:00.881  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 55051.
+2019-01-21 16:53:00.881  INFO 733400 --- [pool-1-thread-1] o.a.s.n.netty.NettyBlockTransferService  : Server created on 55051
+2019-01-21 16:53:00.882  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : Trying to register BlockManager
+2019-01-21 16:53:00.883  INFO 733400 --- [dispatcher-event-loop-0] o.a.s.s.BlockManagerMasterEndpoint       : Registering block manager localhost:55051 with 1780.5 MB RAM, BlockManagerId(driver, localhost, 55051)
+2019-01-21 16:53:00.883  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager
+2019-01-21 16:53:00.899 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : ==>  Preparing: SELECT id FROM [sysobjects] WHERE name = ? 
+2019-01-21 16:53:00.900 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : ==> Parameters: smphbeatslog(String)
+2019-01-21 16:53:00.904 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : <==      Total: 1
+2019-01-21 16:53:00.914 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : ==>  Preparing: SELECT a.id AS "id", a.app AS "app", a.service AS "service", a.name AS "name", a.create_date AS "createDate", a.update_date AS "updateDate" FROM file_read_log a WHERE 1 = 1 AND a.app = ? AND a.service = ? ORDER BY a.create_date DESC 
+2019-01-21 16:53:00.915 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : ==> Parameters: smphbeatslog(String), all(String)
+2019-01-21 16:53:00.922 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : <==      Total: 1
+2019-01-21 16:53:00.955  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+2019-01-21 16:53:00.956  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+2019-01-21 16:53:00.956  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/api,null}
+2019-01-21 16:53:00.957  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/,null}
+2019-01-21 16:53:00.957  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/static,null}
+2019-01-21 16:53:00.957  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+2019-01-21 16:53:00.957  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+2019-01-21 16:53:00.957  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+2019-01-21 16:53:00.958  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors,null}
+2019-01-21 16:53:00.958  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+2019-01-21 16:53:00.958  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/environment,null}
+2019-01-21 16:53:00.958  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+2019-01-21 16:53:00.959  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+2019-01-21 16:53:00.959  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+2019-01-21 16:53:00.959  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage,null}
+2019-01-21 16:53:00.959  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+2019-01-21 16:53:00.959  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+2019-01-21 16:53:00.960  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+2019-01-21 16:53:00.960  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+2019-01-21 16:53:00.960  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+2019-01-21 16:53:00.960  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages,null}
+2019-01-21 16:53:00.960  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+2019-01-21 16:53:00.961  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+2019-01-21 16:53:00.961  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+2019-01-21 16:53:00.961  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs,null}
+2019-01-21 16:53:01.014  INFO 733400 --- [pool-1-thread-1] org.apache.spark.ui.SparkUI              : Stopped Spark web UI at http://localhost:4040
+2019-01-21 16:53:01.018  INFO 733400 --- [dispatcher-event-loop-0] o.a.s.MapOutputTrackerMasterEndpoint     : MapOutputTrackerMasterEndpoint stopped!
+2019-01-21 16:53:01.055  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.MemoryStore     : MemoryStore cleared
+2019-01-21 16:53:01.061  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.BlockManager    : BlockManager stopped
+2019-01-21 16:53:01.064  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : BlockManagerMaster stopped
+2019-01-21 16:53:01.065  INFO 733400 --- [dispatcher-event-loop-1] rdinator$OutputCommitCoordinatorEndpoint : OutputCommitCoordinator stopped!
+2019-01-21 16:53:01.068  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-2] emoteActorRefProvider$RemotingTerminator : Shutting down remote daemon.
+2019-01-21 16:53:01.069  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-2] emoteActorRefProvider$RemotingTerminator : Remote daemon shut down; proceeding with flushing remote transports.
+2019-01-21 16:53:01.102  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkContext            : Successfully stopped SparkContext
+2019-01-21 16:53:01.203  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-2] emoteActorRefProvider$RemotingTerminator : Remoting shut down.
+2019-01-21 16:54:00.003  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkContext            : Running Spark version 1.6.1
+2019-01-21 16:54:00.007  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : Changing view acls to: Administrator
+2019-01-21 16:54:00.007  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : Changing modify acls to: Administrator
+2019-01-21 16:54:00.007  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(Administrator); users with modify permissions: Set(Administrator)
+2019-01-21 16:54:00.168  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'sparkDriver' on port 55078.
+2019-01-21 16:54:00.199  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-7] akka.event.slf4j.Slf4jLogger             : Slf4jLogger started
+2019-01-21 16:54:00.210  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-4] Remoting                                 : Starting remoting
+2019-01-21 16:54:00.392  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-6] Remoting                                 : Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@localhost:55091]
+2019-01-21 16:54:00.394  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'sparkDriverActorSystem' on port 55091.
+2019-01-21 16:54:00.395  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering MapOutputTracker
+2019-01-21 16:54:00.396  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering BlockManagerMaster
+2019-01-21 16:54:00.407  INFO 733400 --- [pool-1-thread-1] o.apache.spark.storage.DiskBlockManager  : Created local directory at C:\Users\Administrator\AppData\Local\Temp\blockmgr-1ec07509-c6d6-4e2f-9e2e-2a8a87219140
+2019-01-21 16:54:00.408  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.MemoryStore     : MemoryStore started with capacity 1780.5 MB
+2019-01-21 16:54:00.423  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering OutputCommitCoordinator
+2019-01-21 16:54:00.511  INFO 733400 --- [pool-1-thread-1] org.spark-project.jetty.server.Server    : jetty-8.y.z-SNAPSHOT
+2019-01-21 16:54:00.568  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.AbstractConnector       : Started SelectChannelConnector@0.0.0.0:4040
+2019-01-21 16:54:00.568  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'SparkUI' on port 4040.
+2019-01-21 16:54:00.569  INFO 733400 --- [pool-1-thread-1] org.apache.spark.ui.SparkUI              : Started SparkUI at http://localhost:4040
+2019-01-21 16:54:00.648  INFO 733400 --- [pool-1-thread-1] org.apache.spark.executor.Executor       : Starting executor ID driver on host localhost
+2019-01-21 16:54:00.686  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 55098.
+2019-01-21 16:54:00.686  INFO 733400 --- [pool-1-thread-1] o.a.s.n.netty.NettyBlockTransferService  : Server created on 55098
+2019-01-21 16:54:00.687  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : Trying to register BlockManager
+2019-01-21 16:54:00.688  INFO 733400 --- [dispatcher-event-loop-2] o.a.s.s.BlockManagerMasterEndpoint       : Registering block manager localhost:55098 with 1780.5 MB RAM, BlockManagerId(driver, localhost, 55098)
+2019-01-21 16:54:00.688  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager
+2019-01-21 16:54:00.698 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : ==>  Preparing: SELECT id FROM [sysobjects] WHERE name = ? 
+2019-01-21 16:54:00.699 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : ==> Parameters: smphbeatslog(String)
+2019-01-21 16:54:00.703 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : <==      Total: 1
+2019-01-21 16:54:00.715 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : ==>  Preparing: SELECT a.id AS "id", a.app AS "app", a.service AS "service", a.name AS "name", a.create_date AS "createDate", a.update_date AS "updateDate" FROM file_read_log a WHERE 1 = 1 AND a.app = ? AND a.service = ? ORDER BY a.create_date DESC 
+2019-01-21 16:54:00.715 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : ==> Parameters: smphbeatslog(String), all(String)
+2019-01-21 16:54:00.719 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : <==      Total: 1
+2019-01-21 16:54:00.747  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+2019-01-21 16:54:00.747  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+2019-01-21 16:54:00.747  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/api,null}
+2019-01-21 16:54:00.747  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/,null}
+2019-01-21 16:54:00.747  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/static,null}
+2019-01-21 16:54:00.748  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+2019-01-21 16:54:00.748  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+2019-01-21 16:54:00.748  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+2019-01-21 16:54:00.748  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors,null}
+2019-01-21 16:54:00.748  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+2019-01-21 16:54:00.748  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/environment,null}
+2019-01-21 16:54:00.748  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+2019-01-21 16:54:00.748  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+2019-01-21 16:54:00.749  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+2019-01-21 16:54:00.749  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage,null}
+2019-01-21 16:54:00.749  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+2019-01-21 16:54:00.749  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+2019-01-21 16:54:00.749  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+2019-01-21 16:54:00.752  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+2019-01-21 16:54:00.752  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+2019-01-21 16:54:00.752  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages,null}
+2019-01-21 16:54:00.752  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+2019-01-21 16:54:00.753  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+2019-01-21 16:54:00.753  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+2019-01-21 16:54:00.753  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs,null}
+2019-01-21 16:54:00.807  INFO 733400 --- [pool-1-thread-1] org.apache.spark.ui.SparkUI              : Stopped Spark web UI at http://localhost:4040
+2019-01-21 16:54:00.813  INFO 733400 --- [dispatcher-event-loop-0] o.a.s.MapOutputTrackerMasterEndpoint     : MapOutputTrackerMasterEndpoint stopped!
+2019-01-21 16:54:00.828  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.MemoryStore     : MemoryStore cleared
+2019-01-21 16:54:00.829  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.BlockManager    : BlockManager stopped
+2019-01-21 16:54:00.831  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : BlockManagerMaster stopped
+2019-01-21 16:54:00.832  INFO 733400 --- [dispatcher-event-loop-1] rdinator$OutputCommitCoordinatorEndpoint : OutputCommitCoordinator stopped!
+2019-01-21 16:54:00.834  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-6] emoteActorRefProvider$RemotingTerminator : Shutting down remote daemon.
+2019-01-21 16:54:00.834  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-6] emoteActorRefProvider$RemotingTerminator : Remote daemon shut down; proceeding with flushing remote transports.
+2019-01-21 16:54:00.859  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkContext            : Successfully stopped SparkContext
+2019-01-21 16:54:00.960  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-8] emoteActorRefProvider$RemotingTerminator : Remoting shut down.
+2019-01-21 16:55:00.004  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkContext            : Running Spark version 1.6.1
+2019-01-21 16:55:00.007  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : Changing view acls to: Administrator
+2019-01-21 16:55:00.007  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : Changing modify acls to: Administrator
+2019-01-21 16:55:00.007  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(Administrator); users with modify permissions: Set(Administrator)
+2019-01-21 16:55:00.158  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'sparkDriver' on port 55121.
+2019-01-21 16:55:00.318  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-4] akka.event.slf4j.Slf4jLogger             : Slf4jLogger started
+2019-01-21 16:55:00.330  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-5] Remoting                                 : Starting remoting
+2019-01-21 16:55:00.516  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-4] Remoting                                 : Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@localhost:55134]
+2019-01-21 16:55:00.517  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'sparkDriverActorSystem' on port 55134.
+2019-01-21 16:55:00.519  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering MapOutputTracker
+2019-01-21 16:55:00.522  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering BlockManagerMaster
+2019-01-21 16:55:00.532  INFO 733400 --- [pool-1-thread-1] o.apache.spark.storage.DiskBlockManager  : Created local directory at C:\Users\Administrator\AppData\Local\Temp\blockmgr-176f76a8-c077-4be7-b9ed-3efcd60f4144
+2019-01-21 16:55:00.533  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.MemoryStore     : MemoryStore started with capacity 1780.5 MB
+2019-01-21 16:55:00.549  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering OutputCommitCoordinator
+2019-01-21 16:55:00.586  INFO 733400 --- [pool-1-thread-1] org.spark-project.jetty.server.Server    : jetty-8.y.z-SNAPSHOT
+2019-01-21 16:55:00.613  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.AbstractConnector       : Started SelectChannelConnector@0.0.0.0:4040
+2019-01-21 16:55:00.638  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'SparkUI' on port 4040.
+2019-01-21 16:55:00.639  INFO 733400 --- [pool-1-thread-1] org.apache.spark.ui.SparkUI              : Started SparkUI at http://localhost:4040
+2019-01-21 16:55:00.788  INFO 733400 --- [pool-1-thread-1] org.apache.spark.executor.Executor       : Starting executor ID driver on host localhost
+2019-01-21 16:55:00.831  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 55141.
+2019-01-21 16:55:00.831  INFO 733400 --- [pool-1-thread-1] o.a.s.n.netty.NettyBlockTransferService  : Server created on 55141
+2019-01-21 16:55:00.831  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : Trying to register BlockManager
+2019-01-21 16:55:00.832  INFO 733400 --- [dispatcher-event-loop-2] o.a.s.s.BlockManagerMasterEndpoint       : Registering block manager localhost:55141 with 1780.5 MB RAM, BlockManagerId(driver, localhost, 55141)
+2019-01-21 16:55:00.833  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager
+2019-01-21 16:55:00.897 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : ==>  Preparing: SELECT id FROM [sysobjects] WHERE name = ? 
+2019-01-21 16:55:00.897 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : ==> Parameters: smphbeatslog(String)
+2019-01-21 16:55:00.902 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : <==      Total: 1
+2019-01-21 16:55:00.913 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : ==>  Preparing: SELECT a.id AS "id", a.app AS "app", a.service AS "service", a.name AS "name", a.create_date AS "createDate", a.update_date AS "updateDate" FROM file_read_log a WHERE 1 = 1 AND a.app = ? AND a.service = ? ORDER BY a.create_date DESC 
+2019-01-21 16:55:00.914 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : ==> Parameters: smphbeatslog(String), all(String)
+2019-01-21 16:55:00.922 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : <==      Total: 1
+2019-01-21 16:55:00.957  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+2019-01-21 16:55:00.957  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+2019-01-21 16:55:00.957  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/api,null}
+2019-01-21 16:55:00.957  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/,null}
+2019-01-21 16:55:00.957  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/static,null}
+2019-01-21 16:55:00.958  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+2019-01-21 16:55:00.958  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+2019-01-21 16:55:00.958  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+2019-01-21 16:55:00.958  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors,null}
+2019-01-21 16:55:00.958  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+2019-01-21 16:55:00.958  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/environment,null}
+2019-01-21 16:55:00.958  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+2019-01-21 16:55:00.958  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+2019-01-21 16:55:00.958  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+2019-01-21 16:55:00.959  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage,null}
+2019-01-21 16:55:00.959  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+2019-01-21 16:55:00.959  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+2019-01-21 16:55:00.959  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+2019-01-21 16:55:00.959  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+2019-01-21 16:55:00.959  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+2019-01-21 16:55:00.959  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages,null}
+2019-01-21 16:55:00.960  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+2019-01-21 16:55:00.960  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+2019-01-21 16:55:00.960  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+2019-01-21 16:55:00.960  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs,null}
+2019-01-21 16:55:01.020  INFO 733400 --- [pool-1-thread-1] org.apache.spark.ui.SparkUI              : Stopped Spark web UI at http://localhost:4040
+2019-01-21 16:55:01.024  INFO 733400 --- [dispatcher-event-loop-0] o.a.s.MapOutputTrackerMasterEndpoint     : MapOutputTrackerMasterEndpoint stopped!
+2019-01-21 16:55:01.069  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.MemoryStore     : MemoryStore cleared
+2019-01-21 16:55:01.069  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.BlockManager    : BlockManager stopped
+2019-01-21 16:55:01.071  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : BlockManagerMaster stopped
+2019-01-21 16:55:01.073  INFO 733400 --- [dispatcher-event-loop-3] rdinator$OutputCommitCoordinatorEndpoint : OutputCommitCoordinator stopped!
+2019-01-21 16:55:01.075  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-3] emoteActorRefProvider$RemotingTerminator : Shutting down remote daemon.
+2019-01-21 16:55:01.075  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-3] emoteActorRefProvider$RemotingTerminator : Remote daemon shut down; proceeding with flushing remote transports.
+2019-01-21 16:55:01.091  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkContext            : Successfully stopped SparkContext
+2019-01-21 16:55:01.166  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-3] emoteActorRefProvider$RemotingTerminator : Remoting shut down.
+2019-01-21 16:56:00.004  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkContext            : Running Spark version 1.6.1
+2019-01-21 16:56:00.006  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : Changing view acls to: Administrator
+2019-01-21 16:56:00.006  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : Changing modify acls to: Administrator
+2019-01-21 16:56:00.007  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(Administrator); users with modify permissions: Set(Administrator)
+2019-01-21 16:56:00.217  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'sparkDriver' on port 55165.
+2019-01-21 16:56:00.268  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-4] akka.event.slf4j.Slf4jLogger             : Slf4jLogger started
+2019-01-21 16:56:00.283  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-2] Remoting                                 : Starting remoting
+2019-01-21 16:56:00.434  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-6] Remoting                                 : Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@localhost:55178]
+2019-01-21 16:56:00.435  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'sparkDriverActorSystem' on port 55178.
+2019-01-21 16:56:00.436  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering MapOutputTracker
+2019-01-21 16:56:00.438  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering BlockManagerMaster
+2019-01-21 16:56:00.449  INFO 733400 --- [pool-1-thread-1] o.apache.spark.storage.DiskBlockManager  : Created local directory at C:\Users\Administrator\AppData\Local\Temp\blockmgr-d3171605-4da6-47a3-8a33-07d7f3aa07a6
+2019-01-21 16:56:00.451  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.MemoryStore     : MemoryStore started with capacity 1780.5 MB
+2019-01-21 16:56:00.467  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering OutputCommitCoordinator
+2019-01-21 16:56:00.484  INFO 733400 --- [pool-1-thread-1] org.spark-project.jetty.server.Server    : jetty-8.y.z-SNAPSHOT
+2019-01-21 16:56:00.523  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.AbstractConnector       : Started SelectChannelConnector@0.0.0.0:4040
+2019-01-21 16:56:00.523  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'SparkUI' on port 4040.
+2019-01-21 16:56:00.524  INFO 733400 --- [pool-1-thread-1] org.apache.spark.ui.SparkUI              : Started SparkUI at http://localhost:4040
+2019-01-21 16:56:00.643  INFO 733400 --- [pool-1-thread-1] org.apache.spark.executor.Executor       : Starting executor ID driver on host localhost
+2019-01-21 16:56:00.689  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 55185.
+2019-01-21 16:56:00.690  INFO 733400 --- [pool-1-thread-1] o.a.s.n.netty.NettyBlockTransferService  : Server created on 55185
+2019-01-21 16:56:00.690  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : Trying to register BlockManager
+2019-01-21 16:56:00.691  INFO 733400 --- [dispatcher-event-loop-3] o.a.s.s.BlockManagerMasterEndpoint       : Registering block manager localhost:55185 with 1780.5 MB RAM, BlockManagerId(driver, localhost, 55185)
+2019-01-21 16:56:00.691  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager
+2019-01-21 16:56:00.705 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : ==>  Preparing: SELECT id FROM [sysobjects] WHERE name = ? 
+2019-01-21 16:56:00.705 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : ==> Parameters: smphbeatslog(String)
+2019-01-21 16:56:00.710 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : <==      Total: 1
+2019-01-21 16:56:00.724 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : ==>  Preparing: SELECT a.id AS "id", a.app AS "app", a.service AS "service", a.name AS "name", a.create_date AS "createDate", a.update_date AS "updateDate" FROM file_read_log a WHERE 1 = 1 AND a.app = ? AND a.service = ? ORDER BY a.create_date DESC 
+2019-01-21 16:56:00.724 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : ==> Parameters: smphbeatslog(String), all(String)
+2019-01-21 16:56:00.731 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : <==      Total: 1
+2019-01-21 16:56:00.765  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+2019-01-21 16:56:00.766  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+2019-01-21 16:56:00.766  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/api,null}
+2019-01-21 16:56:00.766  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/,null}
+2019-01-21 16:56:00.766  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/static,null}
+2019-01-21 16:56:00.767  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+2019-01-21 16:56:00.767  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+2019-01-21 16:56:00.767  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+2019-01-21 16:56:00.767  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors,null}
+2019-01-21 16:56:00.767  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+2019-01-21 16:56:00.767  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/environment,null}
+2019-01-21 16:56:00.767  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+2019-01-21 16:56:00.768  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+2019-01-21 16:56:00.768  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+2019-01-21 16:56:00.768  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage,null}
+2019-01-21 16:56:00.768  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+2019-01-21 16:56:00.768  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+2019-01-21 16:56:00.769  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+2019-01-21 16:56:00.769  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+2019-01-21 16:56:00.769  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+2019-01-21 16:56:00.769  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages,null}
+2019-01-21 16:56:00.770  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+2019-01-21 16:56:00.770  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+2019-01-21 16:56:00.770  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+2019-01-21 16:56:00.770  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs,null}
+2019-01-21 16:56:00.822  INFO 733400 --- [pool-1-thread-1] org.apache.spark.ui.SparkUI              : Stopped Spark web UI at http://localhost:4040
+2019-01-21 16:56:00.826  INFO 733400 --- [dispatcher-event-loop-3] o.a.s.MapOutputTrackerMasterEndpoint     : MapOutputTrackerMasterEndpoint stopped!
+2019-01-21 16:56:00.854  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.MemoryStore     : MemoryStore cleared
+2019-01-21 16:56:00.854  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.BlockManager    : BlockManager stopped
+2019-01-21 16:56:00.857  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : BlockManagerMaster stopped
+2019-01-21 16:56:00.857  INFO 733400 --- [dispatcher-event-loop-1] rdinator$OutputCommitCoordinatorEndpoint : OutputCommitCoordinator stopped!
+2019-01-21 16:56:00.858  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-4] emoteActorRefProvider$RemotingTerminator : Shutting down remote daemon.
+2019-01-21 16:56:00.859  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-4] emoteActorRefProvider$RemotingTerminator : Remote daemon shut down; proceeding with flushing remote transports.
+2019-01-21 16:56:00.879  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkContext            : Successfully stopped SparkContext
+2019-01-21 16:56:00.965  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-4] emoteActorRefProvider$RemotingTerminator : Remoting shut down.
+2019-01-21 16:57:00.003  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkContext            : Running Spark version 1.6.1
+2019-01-21 16:57:00.007  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : Changing view acls to: Administrator
+2019-01-21 16:57:00.008  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : Changing modify acls to: Administrator
+2019-01-21 16:57:00.008  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SecurityManager         : SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(Administrator); users with modify permissions: Set(Administrator)
+2019-01-21 16:57:00.156  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'sparkDriver' on port 55208.
+2019-01-21 16:57:00.185  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-2] akka.event.slf4j.Slf4jLogger             : Slf4jLogger started
+2019-01-21 16:57:00.198  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-2] Remoting                                 : Starting remoting
+2019-01-21 16:57:00.372  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-8] Remoting                                 : Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@localhost:55221]
+2019-01-21 16:57:00.375  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'sparkDriverActorSystem' on port 55221.
+2019-01-21 16:57:00.377  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering MapOutputTracker
+2019-01-21 16:57:00.378  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering BlockManagerMaster
+2019-01-21 16:57:00.401  INFO 733400 --- [pool-1-thread-1] o.apache.spark.storage.DiskBlockManager  : Created local directory at C:\Users\Administrator\AppData\Local\Temp\blockmgr-55c420f2-44f8-4bda-933d-18291310d0fe
+2019-01-21 16:57:00.402  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.MemoryStore     : MemoryStore started with capacity 1780.5 MB
+2019-01-21 16:57:00.422  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkEnv                : Registering OutputCommitCoordinator
+2019-01-21 16:57:00.468  INFO 733400 --- [pool-1-thread-1] org.spark-project.jetty.server.Server    : jetty-8.y.z-SNAPSHOT
+2019-01-21 16:57:00.539  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.AbstractConnector       : Started SelectChannelConnector@0.0.0.0:4040
+2019-01-21 16:57:00.540  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'SparkUI' on port 4040.
+2019-01-21 16:57:00.540  INFO 733400 --- [pool-1-thread-1] org.apache.spark.ui.SparkUI              : Started SparkUI at http://localhost:4040
+2019-01-21 16:57:00.756  INFO 733400 --- [pool-1-thread-1] org.apache.spark.executor.Executor       : Starting executor ID driver on host localhost
+2019-01-21 16:57:00.898  INFO 733400 --- [pool-1-thread-1] org.apache.spark.util.Utils              : Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 55228.
+2019-01-21 16:57:00.899  INFO 733400 --- [pool-1-thread-1] o.a.s.n.netty.NettyBlockTransferService  : Server created on 55228
+2019-01-21 16:57:00.899  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : Trying to register BlockManager
+2019-01-21 16:57:00.900  INFO 733400 --- [dispatcher-event-loop-2] o.a.s.s.BlockManagerMasterEndpoint       : Registering block manager localhost:55228 with 1780.5 MB RAM, BlockManagerId(driver, localhost, 55228)
+2019-01-21 16:57:00.900  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : Registered BlockManager
+2019-01-21 16:57:01.040 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : ==>  Preparing: SELECT id FROM [sysobjects] WHERE name = ? 
+2019-01-21 16:57:01.041 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : ==> Parameters: smphbeatslog(String)
+2019-01-21 16:57:01.046 DEBUG 733400 --- [pool-1-thread-1] com.inesa.hadoop.dao.LogDao.findTable    : <==      Total: 1
+2019-01-21 16:57:01.059 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : ==>  Preparing: SELECT a.id AS "id", a.app AS "app", a.service AS "service", a.name AS "name", a.create_date AS "createDate", a.update_date AS "updateDate" FROM file_read_log a WHERE 1 = 1 AND a.app = ? AND a.service = ? ORDER BY a.create_date DESC 
+2019-01-21 16:57:01.060 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : ==> Parameters: smphbeatslog(String), all(String)
+2019-01-21 16:57:01.064 DEBUG 733400 --- [pool-1-thread-1] c.i.hadoop.dao.FileReadLogDao.findList   : <==      Total: 1
+2019-01-21 16:57:01.097  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+2019-01-21 16:57:01.097  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+2019-01-21 16:57:01.098  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/api,null}
+2019-01-21 16:57:01.098  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/,null}
+2019-01-21 16:57:01.098  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/static,null}
+2019-01-21 16:57:01.098  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+2019-01-21 16:57:01.098  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+2019-01-21 16:57:01.099  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+2019-01-21 16:57:01.099  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/executors,null}
+2019-01-21 16:57:01.099  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+2019-01-21 16:57:01.099  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/environment,null}
+2019-01-21 16:57:01.099  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+2019-01-21 16:57:01.099  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+2019-01-21 16:57:01.099  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+2019-01-21 16:57:01.099  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/storage,null}
+2019-01-21 16:57:01.099  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+2019-01-21 16:57:01.099  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+2019-01-21 16:57:01.099  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+2019-01-21 16:57:01.100  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+2019-01-21 16:57:01.100  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+2019-01-21 16:57:01.100  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/stages,null}
+2019-01-21 16:57:01.100  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+2019-01-21 16:57:01.100  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+2019-01-21 16:57:01.101  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+2019-01-21 16:57:01.101  INFO 733400 --- [pool-1-thread-1] o.s.jetty.server.handler.ContextHandler  : stopped o.s.j.s.ServletContextHandler{/jobs,null}
+2019-01-21 16:57:01.154  INFO 733400 --- [pool-1-thread-1] org.apache.spark.ui.SparkUI              : Stopped Spark web UI at http://localhost:4040
+2019-01-21 16:57:01.158  INFO 733400 --- [dispatcher-event-loop-2] o.a.s.MapOutputTrackerMasterEndpoint     : MapOutputTrackerMasterEndpoint stopped!
+2019-01-21 16:57:01.172  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.MemoryStore     : MemoryStore cleared
+2019-01-21 16:57:01.172  INFO 733400 --- [pool-1-thread-1] org.apache.spark.storage.BlockManager    : BlockManager stopped
+2019-01-21 16:57:01.174  INFO 733400 --- [pool-1-thread-1] o.a.spark.storage.BlockManagerMaster     : BlockManagerMaster stopped
+2019-01-21 16:57:01.175  INFO 733400 --- [dispatcher-event-loop-0] rdinator$OutputCommitCoordinatorEndpoint : OutputCommitCoordinator stopped!
+2019-01-21 16:57:01.178  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-6] emoteActorRefProvider$RemotingTerminator : Shutting down remote daemon.
+2019-01-21 16:57:01.181  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-6] emoteActorRefProvider$RemotingTerminator : Remote daemon shut down; proceeding with flushing remote transports.
+2019-01-21 16:57:01.204  INFO 733400 --- [pool-1-thread-1] org.apache.spark.SparkContext            : Successfully stopped SparkContext
+2019-01-21 16:57:01.278  INFO 733400 --- [sparkDriverActorSystem-akka.actor.default-dispatcher-7] emoteActorRefProvider$RemotingTerminator : Remoting shut down.
+2019-01-22 09:02:56.971  INFO 737456 --- [main] c.i.c.ConsumerClientApplicationTests     : No active profile set, falling back to default profiles: default
+2019-01-22 09:03:43.358  WARN 737456 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 09:03:43.359  INFO 737456 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 09:03:43.427  WARN 737456 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 09:03:43.428  INFO 737456 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 09:03:54.061  INFO 737456 --- [main] c.i.c.ConsumerClientApplicationTests     : Started ConsumerClientApplicationTests in 71.465 seconds (JVM running for 82.071)
+2019-01-22 09:03:55.279  INFO 737456 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-22 09:03:55.283  INFO 737456 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2019-01-22 09:03:55.305  INFO 737456 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548119035305 with initial instances count: 0
+2019-01-22 09:03:55.355  INFO 737456 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-01-22 09:03:55.356  INFO 737456 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-01-22 09:19:25.341  INFO 736248 --- [main] c.i.c.ConsumerClientApplicationTests     : No active profile set, falling back to default profiles: default
+2019-01-22 09:19:52.651  WARN 736248 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 09:19:52.652  INFO 736248 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 09:19:52.666  WARN 736248 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 09:19:52.667  INFO 736248 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 09:20:01.919  INFO 736248 --- [main] c.i.c.ConsumerClientApplicationTests     : Started ConsumerClientApplicationTests in 42.75 seconds (JVM running for 44.916)
+2019-01-22 09:20:02.198  INFO 736248 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-22 09:20:02.202  INFO 736248 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2019-01-22 09:20:02.226  INFO 736248 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548120002226 with initial instances count: 0
+2019-01-22 09:20:02.241  INFO 736248 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-01-22 09:20:02.242  INFO 736248 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-01-22 11:01:12.443  INFO 750032 --- [main] c.i.c.ConsumerClientApplicationTests     : No active profile set, falling back to default profiles: default
+2019-01-22 11:01:42.014  WARN 750032 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 11:01:42.016  INFO 750032 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 11:01:42.059  WARN 750032 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 11:01:42.060  INFO 750032 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 11:01:56.547  INFO 750032 --- [main] c.i.c.ConsumerClientApplicationTests     : Started ConsumerClientApplicationTests in 49.916 seconds (JVM running for 53.507)
+2019-01-22 11:01:56.933  INFO 750032 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-22 11:01:56.939  INFO 750032 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2019-01-22 11:01:56.965  INFO 750032 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548126116964 with initial instances count: 0
+2019-01-22 11:01:56.981  INFO 750032 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-01-22 11:01:56.982  INFO 750032 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-01-22 11:16:15.000  INFO 754028 --- [main] c.i.c.ConsumerClientApplicationTests     : No active profile set, falling back to default profiles: default
+2019-01-22 11:16:43.092  WARN 754028 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 11:16:43.093  INFO 754028 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 11:16:43.111  WARN 754028 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 11:16:43.112  INFO 754028 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 11:16:51.676  INFO 754028 --- [main] c.i.c.ConsumerClientApplicationTests     : Started ConsumerClientApplicationTests in 42.313 seconds (JVM running for 44.814)
+2019-01-22 11:16:52.250  INFO 754028 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-22 11:16:52.254  INFO 754028 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2019-01-22 11:16:52.275  INFO 754028 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548127012275 with initial instances count: 0
+2019-01-22 11:16:52.291  INFO 754028 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-01-22 11:16:52.292  INFO 754028 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-01-22 11:34:23.587  INFO 754004 --- [main] c.i.c.ConsumerClientApplicationTests     : No active profile set, falling back to default profiles: default
+2019-01-22 11:34:53.740  WARN 754004 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 11:34:53.740  INFO 754004 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 11:34:53.755  WARN 754004 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 11:34:53.756  INFO 754004 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 11:35:02.150  INFO 754004 --- [main] c.i.c.ConsumerClientApplicationTests     : Started ConsumerClientApplicationTests in 46.836 seconds (JVM running for 50.626)
+2019-01-22 11:35:02.430  INFO 754004 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-22 11:35:02.434  INFO 754004 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2019-01-22 11:35:02.461  INFO 754004 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548128102461 with initial instances count: 0
+2019-01-22 11:35:02.482  INFO 754004 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-01-22 11:35:02.483  INFO 754004 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-01-22 11:42:10.683  INFO 753272 --- [main] c.i.c.ConsumerClientApplicationTests     : No active profile set, falling back to default profiles: default
+2019-01-22 11:42:42.891  WARN 753272 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 11:42:42.892  INFO 753272 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 11:42:42.912  WARN 753272 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 11:42:42.913  INFO 753272 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 11:42:51.254  INFO 753272 --- [main] c.i.c.ConsumerClientApplicationTests     : Started ConsumerClientApplicationTests in 47.052 seconds (JVM running for 51.082)
+2019-01-22 11:42:51.502  INFO 753272 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-22 11:42:51.507  INFO 753272 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2019-01-22 11:42:51.532  INFO 753272 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548128571531 with initial instances count: 0
+2019-01-22 11:42:51.545  INFO 753272 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-01-22 11:42:51.547  INFO 753272 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-01-22 11:49:16.040  INFO 758376 --- [main] c.i.c.ConsumerClientApplicationTests     : No active profile set, falling back to default profiles: default
+2019-01-22 11:49:44.783  WARN 758376 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 11:49:44.784  INFO 758376 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 11:49:44.799  WARN 758376 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 11:49:44.800  INFO 758376 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 11:49:52.958  INFO 758376 --- [main] c.i.c.ConsumerClientApplicationTests     : Started ConsumerClientApplicationTests in 42.822 seconds (JVM running for 45.654)
+2019-01-22 11:49:53.380  INFO 758376 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-22 11:49:53.393  INFO 758376 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2019-01-22 11:49:53.450  INFO 758376 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548128993448 with initial instances count: 0
+2019-01-22 11:49:53.471  INFO 758376 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-01-22 11:49:53.472  INFO 758376 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-01-22 12:00:47.271  INFO 760132 --- [main] c.i.c.ConsumerClientApplicationTests     : No active profile set, falling back to default profiles: default
+2019-01-22 12:01:18.057  WARN 760132 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 12:01:18.058  INFO 760132 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 12:01:18.076  WARN 760132 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 12:01:18.077  INFO 760132 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 12:01:28.678  INFO 760132 --- [main] c.i.c.ConsumerClientApplicationTests     : Started ConsumerClientApplicationTests in 50.593 seconds (JVM running for 53.46)
+2019-01-22 12:01:28.955  INFO 760132 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-22 12:01:28.959  INFO 760132 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2019-01-22 12:01:28.990  INFO 760132 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548129688990 with initial instances count: 0
+2019-01-22 12:01:29.010  INFO 760132 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-01-22 12:01:29.011  INFO 760132 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-01-22 13:44:09.333  INFO 773196 --- [main] c.i.c.ConsumerClientApplicationTests     : No active profile set, falling back to default profiles: default
+2019-01-22 13:44:41.470  WARN 773196 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 13:44:41.471  INFO 773196 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 13:44:41.515  WARN 773196 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 13:44:41.516  INFO 773196 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 13:44:53.684  INFO 773196 --- [main] c.i.c.ConsumerClientApplicationTests     : Started ConsumerClientApplicationTests in 51.495 seconds (JVM running for 53.918)
+2019-01-22 13:44:54.482  INFO 773196 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-22 13:44:54.510  INFO 773196 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2019-01-22 13:44:54.577  INFO 773196 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548135894538 with initial instances count: 0
+2019-01-22 13:44:54.602  INFO 773196 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-01-22 13:44:54.603  INFO 773196 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-01-22 13:48:19.310  INFO 757752 --- [main] c.i.c.ConsumerClientApplicationTests     : No active profile set, falling back to default profiles: default
+2019-01-22 13:48:47.645  WARN 757752 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 13:48:47.646  INFO 757752 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 13:48:47.663  WARN 757752 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-22 13:48:47.664  INFO 757752 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-22 13:48:57.631  INFO 757752 --- [main] c.i.c.ConsumerClientApplicationTests     : Started ConsumerClientApplicationTests in 45.408 seconds (JVM running for 47.957)
+2019-01-22 13:48:58.257  INFO 757752 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-22 13:48:58.261  INFO 757752 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2019-01-22 13:48:58.284  INFO 757752 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548136138284 with initial instances count: 0
+2019-01-22 13:48:58.304  INFO 757752 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-01-22 13:48:58.304  INFO 757752 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-01-23 11:22:25.514  INFO 797208 --- [main] c.i.c.ConsumerClientApplicationTests     : No active profile set, falling back to default profiles: default
+2019-01-23 11:23:04.659  WARN 797208 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-23 11:23:04.660  INFO 797208 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-23 11:23:04.718  WARN 797208 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-23 11:23:04.719  INFO 797208 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-23 11:23:20.816  INFO 797208 --- [main] c.i.c.ConsumerClientApplicationTests     : Started ConsumerClientApplicationTests in 68.762 seconds (JVM running for 79.208)
+2019-01-23 11:23:21.315  INFO 797208 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-23 11:23:21.319  INFO 797208 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2019-01-23 11:23:21.350  INFO 797208 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548213801349 with initial instances count: 0
+2019-01-23 11:23:21.367  INFO 797208 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-01-23 11:23:21.368  INFO 797208 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-01-23 13:12:12.071  INFO 797708 --- [main] c.i.c.ConsumerClientApplicationTests     : No active profile set, falling back to default profiles: default
+2019-01-23 13:13:05.957  WARN 797708 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-23 13:13:05.958  INFO 797708 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-23 13:13:06.013  WARN 797708 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-23 13:13:06.013  INFO 797708 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-23 13:13:17.220  INFO 797708 --- [main] c.i.c.ConsumerClientApplicationTests     : Started ConsumerClientApplicationTests in 80.683 seconds (JVM running for 88.15)
+2019-01-23 13:13:18.373  INFO 797708 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-23 13:13:18.377  INFO 797708 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2019-01-23 13:13:18.402  INFO 797708 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548220398402 with initial instances count: 0
+2019-01-23 13:13:18.418  INFO 797708 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-01-23 13:13:18.419  INFO 797708 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-01-23 13:21:02.177  INFO 799012 --- [main] c.i.c.ConsumerClientApplicationTests     : No active profile set, falling back to default profiles: default
+2019-01-23 13:21:39.978  WARN 799012 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-23 13:21:39.979  INFO 799012 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-23 13:21:40.017  WARN 799012 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-23 13:21:40.018  INFO 799012 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-23 13:21:52.303  INFO 799012 --- [main] c.i.c.ConsumerClientApplicationTests     : Started ConsumerClientApplicationTests in 58.066 seconds (JVM running for 60.83)
+2019-01-23 13:21:52.649  INFO 799012 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-23 13:21:52.653  INFO 799012 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2019-01-23 13:21:52.676  INFO 799012 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548220912675 with initial instances count: 0
+2019-01-23 13:21:52.693  INFO 799012 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-01-23 13:21:52.693  INFO 799012 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-01-23 13:27:51.939  INFO 800364 --- [main] c.i.c.ConsumerClientApplicationTests     : No active profile set, falling back to default profiles: default
+2019-01-23 13:28:26.244  WARN 800364 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-23 13:28:26.245  INFO 800364 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-23 13:28:26.266  WARN 800364 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-23 13:28:26.267  INFO 800364 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-23 13:28:38.394  INFO 800364 --- [main] c.i.c.ConsumerClientApplicationTests     : Started ConsumerClientApplicationTests in 55.845 seconds (JVM running for 59.093)
+2019-01-23 13:28:38.625  INFO 800364 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-23 13:28:38.637  INFO 800364 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2019-01-23 13:28:38.669  INFO 800364 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548221318668 with initial instances count: 0
+2019-01-23 13:28:38.687  INFO 800364 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-01-23 13:28:38.688  INFO 800364 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-01-23 14:32:30.159  INFO 808812 --- [main] c.i.c.ConsumerClientApplicationTests     : No active profile set, falling back to default profiles: default
+2019-01-23 14:33:02.534  WARN 808812 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-23 14:33:02.535  INFO 808812 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-23 14:33:02.553  WARN 808812 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-23 14:33:02.553  INFO 808812 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-23 14:33:10.966  INFO 808812 --- [main] c.i.c.ConsumerClientApplicationTests     : Started ConsumerClientApplicationTests in 46.303 seconds (JVM running for 49.363)
+2019-01-23 14:33:11.212  INFO 808812 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-23 14:33:11.216  INFO 808812 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2019-01-23 14:33:11.240  INFO 808812 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548225191238 with initial instances count: 0
+2019-01-23 14:33:11.255  INFO 808812 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-01-23 14:33:11.256  INFO 808812 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-01-24 09:40:23.297  INFO 834852 --- [main] c.i.c.ConsumerClientApplicationTests     : No active profile set, falling back to default profiles: default
+2019-01-24 09:41:00.300  WARN 834852 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-24 09:41:00.301  INFO 834852 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-24 09:41:00.332  WARN 834852 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-24 09:41:00.332  INFO 834852 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-24 09:41:10.733  INFO 834852 --- [main] c.i.c.ConsumerClientApplicationTests     : Started ConsumerClientApplicationTests in 57.69 seconds (JVM running for 66.502)
+2019-01-24 09:41:11.096  INFO 834852 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-24 09:41:11.101  INFO 834852 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2019-01-24 09:41:11.126  INFO 834852 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548294071126 with initial instances count: 0
+2019-01-24 09:41:11.144  INFO 834852 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-01-24 09:41:11.145  INFO 834852 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

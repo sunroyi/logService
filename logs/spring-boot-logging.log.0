@@ -1,0 +1,4 @@
+[2018-12-21 17:02:17.193] - 1513564 信息 [main] --- org.apache.catalina.core.StandardService: Starting service [Tomcat]
+[2018-12-21 17:02:17.615] - 1513564 信息 [main] --- org.apache.catalina.core.StandardEngine: Starting Servlet Engine: Apache Tomcat/8.5.23
+[2018-12-21 17:02:18.404] - 1513564 信息 [localhost-startStop-1] --- org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]: Initializing Spring embedded WebApplicationContext
+[2018-12-21 17:02:19.829] - 1513564 信息 [localhost-startStop-1] --- org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]: 已经添加任务调度表

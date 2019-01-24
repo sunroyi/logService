@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inesa.hadoop.dao.FileReadLogDao">
+
+	<sql id="fileReadLogColumns">
+		a.id AS "id",
+		a.app AS "app",
+		a.service AS "service",
+		a.name AS "name",
+		a.create_date AS "createDate",
+		a.update_date AS "updateDate"
+	</sql>
+
+	<sql id="fileReadLogJoins">
+	</sql>
+
+	<select id="findList" resultType="com.inesa.hadoop.entity.FileReadLogEntity">
+		SELECT
+			<include refid="fileReadLogColumns"/>
+		FROM file_read_log a
+		<where>
+			1 = 1
+			<if test="app != null and app != ''">
+				AND a.app = #{app}
+			</if>
+			<if test="service != null and service != ''">
+				AND a.service = #{service}
+			</if>
+		</where>
+		ORDER BY a.create_date DESC
+	</select>
+
+    <insert id="insert">
+		INSERT INTO file_read_log(
+            id,
+            app,
+            service,
+            name,
+            create_date,
+            update_date
+		) VALUES (
+            #{id},
+            #{app},
+            #{service},
+            #{name},
+            #{createDate},
+            #{updateDate}
+		)
+	</insert>
+
+	<update id="update">
+		UPDATE file_read_log
+		SET name = #{name},
+			update_date = #{updateDate}
+		WHERE id = #{id}
+	</update>
+</mapper>
